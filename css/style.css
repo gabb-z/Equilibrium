@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+/*CONTAINER PRINCIPAL*/
+#container {
+    background-color: hsl(217, 54%, 11%);
+    height: 100vh;
+    border-top: 1px solid transparent;
+}
+/*CONTAINER PRINCIPAL*/
+
+/*CARD*/
+.card {
+    background-color: hsl(216, 50%, 16%);
+    width: 375px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 1.0);
+}
+/*CARD*/
+
+/*IMAGEM DO CARD*/
+.img-eq {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.div-img {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+
+.div-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: transparent;
+    transition: background .2s ease-in-out;
+}
+
+.div-img:hover::before {
+    background-color: hsla(178, 100%, 50%, 0.5);
+}
+
+.div-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/icon-view.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+}
+
+.div-img:hover::after {
+    display: block;
+}
+/*IMAGEM DO CARD*/
+
+/*TITULO DO CARD*/
+.div-title h2 {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+.div-title h2:hover {
+    color: hsl(178, 100%, 50%);
+}
+/*TITULO DO CARD*/
+
+/*DESCRIÇÃO DO CARD*/
+.div-desc p {
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+/*DESCRIÇÃO DO CARD*/
+
+/*SESSÃO DE ETHEREUM E DIAS CORRIDOS*/
+.div-eth-days {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid hsl(215, 32%, 27%);
+}
+
+/*ETHEREUM*/
+.div-eth {
+    display: flex;
+    align-items: center;
+}
+
+.div-eth span {
+    margin-left: 10px;
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+/*ETHEREUM*/
+
+/*DIAS CORRIDOS*/
+.div-days {
+    display: flex;
+    align-items: center;
+}
+
+.div-days span {
+    margin-left: 10px;
+    color: hsl(215, 51%, 70%);
+}
+/*DIAS CORRIDOS*/
+/*SESSÃO DE ETHEREUM E DIAS CORRIDOS*/
+
+/*AVATAR E AUTOR*/
+.dev {
+    display: flex;
+    align-items: center;
+}
+
+.dev img {
+    width: 10%;
+    border-radius: 50%;
+    border: 1px solid hsl(0, 0%, 100%);
+}
+
+.dev p {
+    margin-left: 10px;
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.dev p strong {
+    color: hsl(0, 0%, 100%);
+    font-weight: 300;
+    transition: color .3s ease-in-out;
+    cursor: pointer;
+}
+
+.dev strong:hover {
+    color: hsl(178, 100%, 50%);
+}
+/*AVATAR E AUTOR*/
+
+/*FOOTER*/
+.footer {
+    background-color: hsl(216, 50%, 16%);
+    text-align: center;
+    color: hsl(215, 51%, 70%);
+    padding: 15px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    transition: color .3s ease-in-out;
+}
+
+.footer a:hover {
+    color: hsl(178, 100%, 50%);
+}
+
+.footer strong {
+    color: hsl(0, 0%, 100%);
+    font-weight: 300;
+    cursor: pointer;
+    transition: color .3s ease-in-out;
+}
+
+.footer strong:hover {
+    color: hsl(178, 100%, 50%);
+}
+/*FOOTER*/
+
+/*MEDIA QUERY*/
+@media screen and (min-width: 320px) {
+    .card {
+        width: 320px;
+    }
+}
+/*MEDIA QUERY*/
